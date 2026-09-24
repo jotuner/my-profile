@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="light" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张箐颐 · 个人作品集 — 视觉设计与营销传播</title>
+    <meta name="description" content="张箐颐个人作品集 — 聚焦美妆、时尚与生活方式领域的视觉设计与整合营销传播。">
+    <style id="theme-vars">
+:root {
+  --folio-bg: #f3f0eb;
+  --folio-foreground: #1a1816;
+  --folio-card: #ffffff;
+  --folio-card-foreground: #1a1816;
+  --folio-popover: #ffffff;
+  --folio-popover-foreground: #1a1816;
+  --folio-primary: #8c7b6c;
+  --folio-primary-foreground: #ffffff;
+  --folio-muted: #e8e4dd;
+  --folio-muted-foreground: #6b655e;
+  --folio-border: #d9d4cc;
+  --folio-input: #d9d4cc;
+  --folio-ring: #8c7b6c;
+  --folio-radius-md: 16px;
+  --folio-radius-lg: 24px;
+  --folio-radius-pill: 999px;
+
+  --folio-surface: #ebe7e0;
+  --folio-surface-2: #e0dbd2;
+  --folio-ink: #1a1816;
+  --folio-ink-2: #5c5751;
+  --folio-ink-3: #8a847b;
+  --folio-line: #d9d4cc;
+  --folio-brand: #8c7b6c;
+  --folio-brand-ink: #ffffff;
+
+  --folio-s-1: 4px;
+  --folio-s-2: 8px;
+  --folio-s-3: 12px;
+  --folio-s-4: 16px;
+  --folio-s-5: 24px;
+  --folio-s-6: 32px;
+  --folio-s-7: 48px;
+  --folio-s-8: 80px;
+  --folio-s-9: 120px;
+
+  --folio-r-xs: 2px;
+  --folio-r-sm: 4px;
+  --folio-r-md: 8px;
+  --folio-r-lg: 16px;
+  --folio-r-xl: 24px;
+  --folio-r-pill: 999px;
+
+  --folio-shadow-1: 0 1px 2px rgba(26, 24, 22, 0.05), 0 1px 1px rgba(26, 24, 22, 0.03);
+  --folio-shadow-2: 0 8px 24px -8px rgba(26, 24, 22, 0.18);
+  --folio-shadow-3: 0 24px 60px -20px rgba(26, 24, 22, 0.30);
+}
+
+@theme inline {
+  --color-background: var(--folio-bg);
+  --color-foreground: var(--folio-foreground);
+  --color-card: var(--folio-card);
+  --color-card-foreground: var(--folio-card-foreground);
+  --color-popover: var(--folio-popover);
+  --color-popover-foreground: var(--folio-popover-foreground);
+  --color-primary: var(--folio-primary);
+  --color-primary-foreground: var(--folio-primary-foreground);
+  --color-muted: var(--folio-muted);
+  --color-muted-foreground: var(--folio-muted-foreground);
+  --color-border: var(--folio-border);
+  --color-input: var(--folio-input);
+  --color-ring: var(--folio-ring);
+  --radius-md: var(--folio-radius-md);
+  --radius-lg: var(--folio-radius-lg);
+}
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.1/dist/index.global.js"></script>
+    <script src="https://unpkg.com/lucide@1.8.0/dist/umd/lucide.min.js"></script>
+    <style type="text/tailwindcss">
+  @theme inline {
+    --color-background: var(--folio-bg);
+    --color-foreground: var(--folio-foreground);
+    --color-card: var(--folio-card);
+    --color-card-foreground: var(--folio-card-foreground);
+    --color-popover: var(--folio-popover);
+    --color-popover-foreground: var(--folio-popover-foreground);
+    --color-primary: var(--folio-primary);
+    --color-primary-foreground: var(--folio-primary-foreground);
+    --color-muted: var(--folio-muted);
+    --color-muted-foreground: var(--folio-muted-foreground);
+    --color-border: var(--folio-border);
+    --color-input: var(--folio-input);
+    --color-ring: var(--folio-ring);
+    --radius-md: var(--folio-radius-md);
+    --radius-lg: var(--folio-radius-lg);
+  }
+  @layer base {
+    body { background: var(--folio-bg); color: var(--folio-foreground); }
+    td, th { @apply break-words; word-break: break-all; word-break: auto-phrase; }
+    th { @apply whitespace-nowrap; }
+  }
+    </style>
+    <style id="semantic-token-fallback">
+      .bg-background { background-color: var(--folio-bg); }
+      .text-background { color: var(--folio-bg); }
+      .border-background { border-color: var(--folio-bg); }
+      .ring-background { --tw-ring-color: var(--folio-bg); }
+      .bg-foreground { background-color: var(--folio-foreground); }
+      .text-foreground { color: var(--folio-foreground); }
+      .border-foreground { border-color: var(--folio-foreground); }
+      .ring-foreground { --tw-ring-color: var(--folio-foreground); }
+      .bg-card { background-color: var(--folio-card); }
+      .text-card { color: var(--folio-card); }
+      .border-card { border-color: var(--folio-card); }
+      .ring-card { --tw-ring-color: var(--folio-card); }
+      .bg-card-foreground { background-color: var(--folio-card-foreground); }
+      .text-card-foreground { color: var(--folio-card-foreground); }
+      .border-card-foreground { border-color: var(--folio-card-foreground); }
+      .ring-card-foreground { --tw-ring-color: var(--folio-card-foreground); }
+      .bg-popover { background-color: var(--folio-popover); }
+      .text-popover { color: var(--folio-popover); }
+      .border-popover { border-color: var(--folio-popover); }
+      .ring-popover { --tw-ring-color: var(--folio-popover); }
+      .bg-popover-foreground { background-color: var(--folio-popover-foreground); }
+      .text-popover-foreground { color: var(--folio-popover-foreground); }
+      .border-popover-foreground { border-color: var(--folio-popover-foreground); }
+      .ring-popover-foreground { --tw-ring-color: var(--folio-popover-foreground); }
+      .bg-primary { background-color: var(--folio-primary); }
+      .text-primary { color: var(--folio-primary); }
+      .border-primary { border-color: var(--folio-primary); }
+      .ring-primary { --tw-ring-color: var(--folio-primary); }
+      .bg-primary-foreground { background-color: var(--folio-primary-foreground); }
+      .text-primary-foreground { color: var(--folio-primary-foreground); }
+      .border-primary-foreground { border-color: var(--folio-primary-foreground); }
+      .ring-primary-foreground { --tw-ring-color: var(--folio-primary-foreground); }
+      .bg-muted { background-color: var(--folio-muted); }
+      .text-muted { color: var(--folio-muted); }
+      .border-muted { border-color: var(--folio-muted); }
+      .ring-muted { --tw-ring-color: var(--folio-muted); }
+      .bg-muted-foreground { background-color: var(--folio-muted-foreground); }
+      .text-muted-foreground { color: var(--folio-muted-foreground); }
+      .border-muted-foreground { border-color: var(--folio-muted-foreground); }
+      .ring-muted-foreground { --tw-ring-color: var(--folio-muted-foreground); }
+      .bg-border { background-color: var(--folio-border); }
+      .text-border { color: var(--folio-border); }
+      .border-border { border-color: var(--folio-border); }
+      .ring-border { --tw-ring-color: var(--folio-border); }
+      .bg-input { background-color: var(--folio-input); }
+      .text-input { color: var(--folio-input); }
+      .border-input { border-color: var(--folio-input); }
+      .ring-input { --tw-ring-color: var(--folio-input); }
+      .bg-ring { background-color: var(--folio-ring); }
+      .text-ring { color: var(--folio-ring); }
+      .border-ring { border-color: var(--folio-ring); }
+      .ring-ring { --tw-ring-color: var(--folio-ring); }
+    </style>
+    <style>
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      [data-icon] {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        background-color: currentColor;
+      }
+    </style>
+</head>
+<body class="min-h-screen font-sans antialiased overflow-x-hidden">
+    <main>
+        <nav id="top-nav" class="fixed top-0 left-0 right-0 z-50 flex items-start justify-between px-6 py-5 md:px-10 md:py-6" aria-label="主导航">
+            <div class="flex flex-col gap-1">
+                <span class="inline-flex items-center rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[11px] font-medium uppercase tracking-wider text-white/90 backdrop-blur-sm">
+                    #1 Snapshot
+                </span>
+            </div>
+            <div class="flex items-center gap-5 md:gap-7">
+                <button type="button" id="btn-projects" data-dom-id="btn-projects" onclick="window.openProjectsPanel && window.openProjectsPanel()" class="nav-glow cursor-pointer text-xs font-medium uppercase tracking-widest text-white/90 transition-all duration-300 hover:scale-110 hover:text-white md:text-sm">
+                    Projects
+                </button>
+                <button type="button" id="btn-about" data-dom-id="btn-about" aria-label="关于我" onclick="window.openAboutModal && window.openAboutModal()" class="nav-glow cursor-pointer text-white/80 transition-all duration-300 hover:scale-110 hover:text-white">
+                    <i data-lucide="user" class="h-5 w-5 md:h-6 md:w-6"></i>
+                </button>
+                <a href="#" aria-label="Instagram" class="nav-glow text-white/80 transition-all duration-300 hover:scale-110 hover:text-white">
+                    <i data-lucide="instagram" class="h-5 w-5 md:h-6 md:w-6"></i>
+                </a>
+                <button type="button" id="btn-music" aria-label="播放/暂停背景音乐" class="nav-glow relative cursor-pointer text-white/80 transition-all duration-300 hover:scale-110 hover:text-white">
+                    <i data-lucide="music" class="h-5 w-5 md:h-6 md:w-6" id="music-icon"></i>
+                    <span class="absolute -right-1 -top-1 h-2 w-2 rounded-full bg-rose-400/80 hidden" id="music-dot"></span>
+                </button>
+            </div>
+        </nav>
+
+        <section id="hero" class="relative flex min-h-screen flex-col overflow-hidden">
+            <video autoplay muted loop playsinline class="absolute inset-0 h-full w-full object-cover object-center" aria-hidden="true">
+                <source src="assets/hero-background.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-b from-[#3c1419]/55 via-[#3c1419]/35 to-[#3c1419]/60" aria-hidden="true"></div>
+
+            <div class="floating-elements pointer-events-none absolute inset-0 z-[5] overflow-hidden" aria-hidden="true">
+                <svg class="float-shape shape-bowtie" style="top:18%;left:12%;width:34px;height:34px;animation-duration:14s;animation-delay:-2s;" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M8 12 L20 24 L8 36 L8 12 Z" fill="rgba(255,255,255,0.55)"/>
+                    <path d="M40 12 L28 24 L40 36 L40 12 Z" fill="rgba(255,255,255,0.55)"/>
+                    <circle cx="24" cy="24" r="4" fill="rgba(255,255,255,0.75)"/>
+                </svg>
+                <svg class="float-shape shape-diamond" style="top:28%;right:16%;width:26px;height:26px;animation-duration:12s;animation-delay:-4s;" viewBox="0 0 48 48" fill="none">
+                    <path d="M24 4 L44 24 L24 44 L4 24 Z" fill="rgba(255,255,255,0.45)"/>
+                </svg>
+                <svg class="float-shape shape-star" style="top:14%;right:28%;width:22px;height:22px;animation-duration:10s;animation-delay:-1s;" viewBox="0 0 48 48" fill="none">
+                    <path d="M24 2 L29 18 L46 18 L32 28 L37 44 L24 34 L11 44 L16 28 L2 18 L19 18 Z" fill="rgba(255,255,255,0.6)"/>
+                </svg>
+                <svg class="float-shape shape-bowtie" style="top:62%;left:22%;width:28px;height:28px;animation-duration:16s;animation-delay:-6s;" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M8 12 L20 24 L8 36 L8 12 Z" fill="rgba(255,255,255,0.4)"/>
+                    <path d="M40 12 L28 24 L40 36 L40 12 Z" fill="rgba(255,255,255,0.4)"/>
+                    <circle cx="24" cy="24" r="4" fill="rgba(255,255,255,0.6)"/>
+                </svg>
+                <svg class="float-shape shape-diamond" style="top:74%;right:22%;width:32px;height:32px;animation-duration:13s;animation-delay:-3s;" viewBox="0 0 48 48" fill="none">
+                    <path d="M24 4 L44 24 L24 44 L4 24 Z" fill="rgba(255,255,255,0.35)"/>
+                </svg>
+                <svg class="float-shape shape-star" style="top:68%;left:8%;width:18px;height:18px;animation-duration:11s;animation-delay:-5s;" viewBox="0 0 48 48" fill="none">
+                    <path d="M24 2 L29 18 L46 18 L32 28 L37 44 L24 34 L11 44 L16 28 L2 18 L19 18 Z" fill="rgba(255,255,255,0.5)"/>
+                </svg>
+                <svg class="float-shape shape-star" style="top:38%;left:4%;width:16px;height:16px;animation-duration:9s;animation-delay:-7s;" viewBox="0 0 48 48" fill="none">
+                    <path d="M24 2 L29 18 L46 18 L32 28 L37 44 L24 34 L11 44 L16 28 L2 18 L19 18 Z" fill="rgba(255,255,255,0.45)"/>
+                </svg>
+                <svg class="float-shape shape-diamond" style="top:48%;right:8%;width:20px;height:20px;animation-duration:15s;animation-delay:-8s;" viewBox="0 0 48 48" fill="none">
+                    <path d="M24 4 L44 24 L24 44 L4 24 Z" fill="rgba(255,255,255,0.5)"/>
+                </svg>
+                <span class="float-orb" style="top:22%;left:26%;width:6px;height:6px;animation-duration:18s;animation-delay:-3s;"></span>
+                <span class="float-orb" style="top:35%;right:38%;width:8px;height:8px;animation-duration:22s;animation-delay:-6s;"></span>
+                <span class="float-orb" style="top:58%;left:18%;width:5px;height:5px;animation-duration:16s;animation-delay:-10s;"></span>
+                <span class="float-orb" style="top:72%;right:30%;width:7px;height:7px;animation-duration:20s;animation-delay:-14s;"></span>
+                <span class="float-orb" style="top:44%;left:44%;width:4px;height:4px;animation-duration:24s;animation-delay:-1s;"></span>
+                <span class="float-orb" style="top:82%;left:38%;width:6px;height:6px;animation-duration:19s;animation-delay:-7s;"></span>
+            </div>
+
+            <div class="relative z-10 flex flex-1 flex-col items-center justify-center px-6 text-center">
+                <h1 class="hero-wordmark text-7xl font-black uppercase leading-[0.82] tracking-[0.12em] sm:text-8xl md:text-9xl lg:text-[11rem]" aria-label="Profile">
+                    <span class="chrome-text letter-wave">P</span><span class="chrome-text letter-wave">r</span><span class="chrome-text letter-wave">o</span><span class="chrome-text letter-wave">f</span><span class="chrome-text letter-wave">i</span><span class="chrome-text letter-wave">l</span><span class="chrome-text letter-wave">e</span>
+                </h1>
+                <p class="hero-chinese mt-4 text-2xl font-light tracking-[0.3em] text-white/95 drop-shadow md:text-3xl">
+                    个人作品集
+                </p>
+                <p class="hero-subtitle mt-3 max-w-md text-sm font-light tracking-wide text-white/85 drop-shadow md:text-base">
+                    梦境 · 概念 · 美妆 · 营销
+                </p>
+            </div>
+
+            <div id="project-dock" class="relative z-20 flex justify-center px-5 pb-8 pt-12 md:px-8 md:pb-10">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#1a1816]/40 via-[#1a1816]/10 to-transparent" aria-hidden="true"></div>
+                <div class="relative flex gap-4 overflow-x-auto no-scrollbar pb-2">
+                    <a href="pages/project-01.html" class="dock-card group flex-shrink-0 flex flex-col gap-2 w-28 sm:w-36 md:w-44">
+                        <figure class="relative aspect-[3/4] overflow-hidden rounded-t-3xl bg-muted shadow-2xl">
+                            <img src="assets/coral-01.jpg" alt="Coral & Pearl" class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105">
+                        </figure>
+                        <figcaption class="text-center">
+                            <span class="block text-xs font-medium text-white/95 md:text-sm">Coral & Pearl</span>
+                            <span class="block text-[10px] text-white/60 md:text-xs">2026</span>
+                        </figcaption>
+                    </a>
+                    <a href="pages/project-02.html" class="dock-card group flex-shrink-0 flex flex-col gap-2 w-28 sm:w-36 md:w-44">
+                        <figure class="relative aspect-[3/4] overflow-hidden rounded-t-3xl bg-muted shadow-2xl">
+                            <img src="assets/project-02.jpg" alt="Bends Not Breaks" class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105">
+                        </figure>
+                        <figcaption class="text-center">
+                            <span class="block text-xs font-medium text-white/95 md:text-sm">Bends Not Breaks</span>
+                            <span class="block text-[10px] text-white/60 md:text-xs">2026</span>
+                        </figcaption>
+                    </a>
+                    <a href="pages/project-03.html" class="dock-card group flex-shrink-0 flex flex-col gap-2 w-28 sm:w-36 md:w-44">
+                        <figure class="relative aspect-[3/4] overflow-hidden rounded-t-3xl bg-muted shadow-2xl">
+                            <img src="assets/project-03.jpg" alt="The Soft Glow Issue" class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105">
+                        </figure>
+                        <figcaption class="text-center">
+                            <span class="block text-xs font-medium text-white/95 md:text-sm">The Soft Glow Issue</span>
+                            <span class="block text-[10px] text-white/60 md:text-xs">2026</span>
+                        </figcaption>
+                    </a>
+                    <a href="pages/project-04.html" class="dock-card group flex-shrink-0 flex flex-col gap-2 w-28 sm:w-36 md:w-44">
+                        <figure class="relative aspect-[3/4] overflow-hidden rounded-t-3xl bg-muted shadow-2xl">
+                            <img src="assets/project-04.jpg" alt="LUMINA" class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105">
+                        </figure>
+                        <figcaption class="text-center">
+                            <span class="block text-xs font-medium text-white/95 md:text-sm">LUMINA</span>
+                            <span class="block text-[10px] text-white/60 md:text-xs">2026</span>
+                        </figcaption>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div id="projects-panel" class="fixed inset-y-0 right-0 z-[60] w-full max-w-sm translate-x-full bg-white/95 backdrop-blur-xl shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]" aria-hidden="true">
+            <div class="flex h-full flex-col p-8 md:p-10">
+                <div class="mb-10 flex items-center justify-between">
+                    <h2 class="text-lg font-medium uppercase tracking-widest text-foreground">Projects</h2>
+                    <button type="button" id="btn-close-projects" aria-label="关闭" class="rounded-full p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground">
+                        <i data-lucide="x" class="h-5 w-5"></i>
+                    </button>
+                </div>
+                <nav class="flex flex-col gap-1">
+                    <a href="pages/project-01.html" class="group flex items-start justify-between border-b border-border py-4 text-foreground transition-colors hover:text-primary">
+                        <div class="flex flex-col gap-1">
+                            <span class="text-xl font-light">Coral & Pearl</span>
+                            <span class="text-xs text-muted-foreground">美妆概念 / 柔和金属</span>
+                        </div>
+                        <i data-lucide="arrow-right" class="mt-1 h-4 w-4 -translate-x-2 opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100"></i>
+                    </a>
+                    <a href="pages/project-02.html" class="group flex items-start justify-between border-b border-border py-4 text-foreground transition-colors hover:text-primary">
+                        <div class="flex flex-col gap-1">
+                            <span class="text-xl font-light">Bends Not Breaks</span>
+                            <span class="text-xs text-muted-foreground">品牌叙事 / 流动性视觉</span>
+                        </div>
+                        <i data-lucide="arrow-right" class="mt-1 h-4 w-4 -translate-x-2 opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100"></i>
+                    </a>
+                    <a href="pages/project-03.html" class="group flex items-start justify-between border-b border-border py-4 text-foreground transition-colors hover:text-primary">
+                        <div class="flex flex-col gap-1">
+                            <span class="text-xl font-light">The Soft Glow Issue</span>
+                            <span class="text-xs text-muted-foreground">梦境编辑 / 光影实验</span>
+                        </div>
+                        <i data-lucide="arrow-right" class="mt-1 h-4 w-4 -translate-x-2 opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100"></i>
+                    </a>
+                    <a href="pages/project-04.html" class="group flex items-start justify-between border-b border-border py-4 text-foreground transition-colors hover:text-primary">
+                        <div class="flex flex-col gap-1">
+                            <span class="text-xl font-light">LUMINA</span>
+                            <span class="text-xs text-muted-foreground">装置视觉 / 未来光泽</span>
+                        </div>
+                        <i data-lucide="arrow-right" class="mt-1 h-4 w-4 -translate-x-2 opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100"></i>
+                    </a>
+                </nav>
+                <div class="mt-auto pt-8">
+                    <p class="text-xs text-muted-foreground">© 2026 ZHI YU</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="about-panel" class="fixed inset-0 z-[60] flex items-center justify-center bg-black/40 opacity-0 pointer-events-none backdrop-blur-sm transition-opacity duration-300" aria-hidden="true">
+            <div class="relative mx-4 w-full max-w-lg scale-95 rounded-2xl bg-background p-8 opacity-0 shadow-2xl transition-all duration-300 md:p-10">
+                <button type="button" id="btn-close-about" aria-label="关闭" class="absolute right-4 top-4 rounded-full p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground">
+                    <i data-lucide="x" class="h-5 w-5"></i>
+                </button>
+                <h2 class="mb-1 text-2xl font-light text-foreground">张箐颐</h2>
+                <p class="mb-6 text-sm uppercase tracking-widest text-muted-foreground">视觉设计师 · 内容营销 · 媒体传播</p>
+                <div class="mt-6 space-y-5 text-sm leading-relaxed text-foreground/90">
+                    <p>视觉设计与营销传播背景，聚焦美妆、时尚与生活方式领域，擅长将品牌叙事转化为可传播的视觉内容与整合营销方案。</p>
+
+                    <div class="space-y-2">
+                        <h3 class="text-xs font-semibold uppercase tracking-wider text-primary">设计能力</h3>
+                        <p>熟练运用 PS、PR、剪映、PPT 等工具，独立完成海报、产品 Brief、宣传物料、短视频及动态数据可视化报告，兼具平面视觉与多媒体内容制作能力。</p>
+                    </div>
+
+                    <div class="space-y-2">
+                        <h3 class="text-xs font-semibold uppercase tracking-wider text-primary">营销能力</h3>
+                        <p>主导 AI 滤镜产品 KOL 整合营销，完成达人挖掘、策略洽谈与执行管理，联动 10+ 头部/腰部 KOL 产出系列视频，累计播放量突破 500 万；深谙小红书、抖音热点与内容转化逻辑。</p>
+                    </div>
+
+                    <div class="space-y-2">
+                        <h3 class="text-xs font-semibold uppercase tracking-wider text-primary">媒体经验</h3>
+                        <p>在万博宣伟服务欧米茄等品牌，独立协调艺人媒体拍摄全流程；采集清洗冬奥期间媒体曝光数据并建立动态周报/月报模型；具备中英文跨文化传播内容撰写与国际团队协作经验。</p>
+                    </div>
+
+                    <p class="pt-2">联系：<a href="mailto:rrss0221@163.com" class="text-primary hover:underline">rrss0221@163.com</a> / 13661181721</p>
+                </div>
+            </div>
+        </div>
+
+        <footer id="contact" class="border-t border-border bg-background px-6 py-8 md:px-10">
+            <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-center md:flex-row md:text-left">
+                <a href="mailto:rrss0221@163.com" class="text-sm font-medium text-foreground transition-colors hover:text-primary md:text-base">
+                    rrss0221@163.com
+                </a>
+                <p class="text-xs text-muted-foreground md:text-sm">
+                    © 2026 ZHI YU
+                </p>
+            </div>
+        </footer>
+    </main>
+
+    <style>
+        .chrome-text {
+            background: linear-gradient(
+                180deg,
+                #ffffff 0%,
+                #e8e4dd 25%,
+                #c4bdb3 50%,
+                #ffffff 65%,
+                #8c7b6c 100%
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow:
+                0 1px 0 rgba(255, 255, 255, 0.45),
+                0 3px 0 rgba(140, 123, 108, 0.25),
+                0 12px 34px rgba(26, 24, 22, 0.45);
+            filter: drop-shadow(0 10px 24px rgba(26, 24, 22, 0.35));
+        }
+
+        @keyframes fade-up {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-wordmark {
+            animation: fade-up 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+            transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), filter 0.55s ease;
+            cursor: default;
+        }
+        .hero-wordmark:hover {
+            transform: translateY(-14px);
+            filter: drop-shadow(0 18px 28px rgba(26, 24, 22, 0.45));
+        }
+        .hero-wordmark .letter-wave {
+            display: inline-block;
+            transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), filter 0.35s ease;
+            animation: letter-color-cycle 4s ease-in-out infinite;
+        }
+        .hero-wordmark:hover .letter-wave {
+            background-image: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1, #84fab0, #8fd3f4, #ff9a9e);
+            background-size: 400% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: letter-color-cycle 1.5s linear infinite, letter-bounce 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+            text-shadow: none;
+            filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.45));
+        }
+        .hero-wordmark:hover .letter-wave:nth-child(1) { animation-delay: 0s, 0s; }
+        .hero-wordmark:hover .letter-wave:nth-child(2) { animation-delay: -0.5s, 0.05s; }
+        .hero-wordmark:hover .letter-wave:nth-child(3) { animation-delay: -1s, 0.1s; }
+        .hero-wordmark:hover .letter-wave:nth-child(4) { animation-delay: -1.5s, 0.15s; }
+        .hero-wordmark:hover .letter-wave:nth-child(5) { animation-delay: -2s, 0.2s; }
+        .hero-wordmark:hover .letter-wave:nth-child(6) { animation-delay: -2.5s, 0.25s; }
+        .hero-wordmark:hover .letter-wave:nth-child(7) { animation-delay: -3s, 0.3s; }
+
+        @keyframes letter-color-cycle {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 400% 50%; }
+        }
+        @keyframes letter-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .hero-chinese {
+            animation: fade-up 1s cubic-bezier(0.22, 1, 0.36, 1) 0.18s both;
+        }
+        .hero-subtitle {
+            animation: fade-up 1s cubic-bezier(0.22, 1, 0.36, 1) 0.32s both;
+        }
+
+        .dock-card {
+            animation: fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+        .dock-card:nth-child(1) { animation-delay: 0.45s; }
+        .dock-card:nth-child(2) { animation-delay: 0.54s; }
+        .dock-card:nth-child(3) { animation-delay: 0.63s; }
+        .dock-card:nth-child(4) { animation-delay: 0.72s; }
+
+        .dock-card figure {
+            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
+        }
+        .dock-card:hover figure {
+            transform: translateY(-10px);
+            box-shadow: 0 28px 60px -16px rgba(26, 24, 22, 0.45);
+        }
+
+        .nav-glow {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), filter 0.35s ease, color 0.3s ease;
+            filter: drop-shadow(0 0 0 rgba(255, 255, 255, 0));
+        }
+        .nav-glow:hover {
+            transform: scale(1.15);
+            filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.75)) drop-shadow(0 0 28px rgba(255, 255, 255, 0.45));
+            text-shadow: 0 0 12px rgba(255, 255, 255, 0.8), 0 0 24px rgba(255, 255, 255, 0.5);
+        }
+
+        .floating-elements {
+            color: rgba(255, 255, 255, 0.85);
+        }
+        .float-shape {
+            position: absolute;
+            filter: drop-shadow(0 4px 14px rgba(26, 24, 22, 0.3));
+            opacity: 0.85;
+            animation-name: float-flow;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            will-change: transform, opacity;
+        }
+
+        @keyframes float-flow {
+            0% {
+                transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+                opacity: 0.75;
+            }
+            20% {
+                transform: translateY(-22px) translateX(14px) rotate(10deg) scale(1.08);
+                opacity: 0.95;
+            }
+            40% {
+                transform: translateY(-10px) translateX(-12px) rotate(-8deg) scale(0.94);
+                opacity: 0.7;
+            }
+            60% {
+                transform: translateY(-28px) translateX(8px) rotate(14deg) scale(1.05);
+                opacity: 0.9;
+            }
+            80% {
+                transform: translateY(-6px) translateX(-6px) rotate(-4deg) scale(0.98);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+                opacity: 0.75;
+            }
+        }
+
+        .shape-bowtie { animation-name: bowtie-flow; }
+        @keyframes bowtie-flow {
+            0%, 100% { transform: translateY(0) rotate(0deg) scale(1); opacity: 0.75; }
+            25% { transform: translateY(-26px) rotate(16deg) scale(1.12); opacity: 0.95; }
+            50% { transform: translateY(-12px) rotate(-12deg) scale(0.94); opacity: 0.7; }
+            75% { transform: translateY(-30px) rotate(8deg) scale(1.06); opacity: 0.9; }
+        }
+
+        .shape-diamond { animation-name: diamond-flow; }
+        @keyframes diamond-flow {
+            0%, 100% { transform: translateY(0) rotate(45deg) scale(1); opacity: 0.65; }
+            33% { transform: translateY(-30px) rotate(70deg) scale(1.18); opacity: 0.95; }
+            66% { transform: translateY(-14px) rotate(30deg) scale(0.9); opacity: 0.75; }
+        }
+
+        .shape-star { animation-name: star-flow; }
+        @keyframes star-flow {
+            0%, 100% { transform: translateY(0) rotate(0deg) scale(1); opacity: 0.8; }
+            30% { transform: translateY(-20px) rotate(22deg) scale(1.14); opacity: 1; }
+            60% { transform: translateY(-8px) rotate(-14deg) scale(0.88); opacity: 0.65; }
+            85% { transform: translateY(-24px) rotate(10deg) scale(1.08); opacity: 0.92; }
+        }
+
+        .float-orb {
+            position: absolute;
+            border-radius: 999px;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.35) 45%, transparent 70%);
+            box-shadow: 0 0 18px 2px rgba(255, 255, 255, 0.35), 0 0 40px 8px rgba(255, 255, 255, 0.15);
+            opacity: 0.7;
+            animation-name: orb-flow;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            will-change: transform, opacity;
+            pointer-events: none;
+        }
+
+        @keyframes orb-flow {
+            0%, 100% {
+                transform: translateY(0) translateX(0) scale(1);
+                opacity: 0.55;
+            }
+            33% {
+                transform: translateY(-34px) translateX(18px) scale(1.25);
+                opacity: 0.9;
+            }
+            66% {
+                transform: translateY(-16px) translateX(-14px) scale(0.85);
+                opacity: 0.6;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            lucide.createIcons();
+
+            const btnProjects = document.getElementById('btn-projects');
+            const btnCloseProjects = document.getElementById('btn-close-projects');
+            const projectsPanel = document.getElementById('projects-panel');
+
+            const btnAbout = document.getElementById('btn-about');
+            const btnCloseAbout = document.getElementById('btn-close-about');
+            const aboutPanel = document.getElementById('about-panel');
+            const aboutCard = aboutPanel.querySelector('div');
+
+            function openProjects() {
+                projectsPanel.classList.remove('translate-x-full');
+                projectsPanel.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeProjects() {
+                projectsPanel.classList.add('translate-x-full');
+                projectsPanel.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
+
+            function openAbout() {
+                aboutPanel.classList.remove('opacity-0', 'pointer-events-none');
+                aboutPanel.setAttribute('aria-hidden', 'false');
+                aboutCard.classList.remove('opacity-0', 'scale-95');
+                aboutCard.classList.add('opacity-100', 'scale-100');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeAbout() {
+                aboutPanel.classList.add('opacity-0', 'pointer-events-none');
+                aboutPanel.setAttribute('aria-hidden', 'true');
+                aboutCard.classList.remove('opacity-100', 'scale-100');
+                aboutCard.classList.add('opacity-0', 'scale-95');
+                document.body.style.overflow = '';
+            }
+
+            btnProjects.addEventListener('click', openProjects);
+            btnCloseProjects.addEventListener('click', closeProjects);
+            btnAbout.addEventListener('click', openAbout);
+            btnCloseAbout.addEventListener('click', closeAbout);
+
+            aboutPanel.addEventListener('click', function (e) {
+                if (e.target === aboutPanel) closeAbout();
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    closeProjects();
+                    closeAbout();
+                }
+            });
+
+            window.openProjectsPanel = openProjects;
+            window.closeProjectsPanel = closeProjects;
+            window.openAboutModal = openAbout;
+            window.closeAboutModal = closeAbout;
+        });
+    </script>
+    <script src="assets/music.js"></script>
+    <script src="assets/pjax.js"></script>
+</body>
+</html>
