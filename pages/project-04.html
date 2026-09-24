@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="light" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMINA — 个人作品集</title>
+    <style id="theme-vars">
+:root {
+  --folio-bg: #f3f0eb;
+  --folio-foreground: #1a1816;
+  --folio-card: #ffffff;
+  --folio-card-foreground: #1a1816;
+  --folio-popover: #ffffff;
+  --folio-popover-foreground: #1a1816;
+  --folio-primary: #8c7b6c;
+  --folio-primary-foreground: #ffffff;
+  --folio-muted: #e8e4dd;
+  --folio-muted-foreground: #6b655e;
+  --folio-border: #d9d4cc;
+  --folio-input: #d9d4cc;
+  --folio-ring: #8c7b6c;
+  --folio-radius-md: 16px;
+  --folio-radius-lg: 24px;
+  --folio-radius-pill: 999px;
+
+  --folio-surface: #ebe7e0;
+  --folio-surface-2: #e0dbd2;
+  --folio-ink: #1a1816;
+  --folio-ink-2: #5c5751;
+  --folio-ink-3: #8a847b;
+  --folio-line: #d9d4cc;
+  --folio-brand: #8c7b6c;
+  --folio-brand-ink: #ffffff;
+
+  --folio-s-1: 4px;
+  --folio-s-2: 8px;
+  --folio-s-3: 12px;
+  --folio-s-4: 16px;
+  --folio-s-5: 24px;
+  --folio-s-6: 32px;
+  --folio-s-7: 48px;
+  --folio-s-8: 80px;
+  --folio-s-9: 120px;
+
+  --folio-r-xs: 2px;
+  --folio-r-sm: 4px;
+  --folio-r-md: 8px;
+  --folio-r-lg: 16px;
+  --folio-r-xl: 24px;
+  --folio-r-pill: 999px;
+
+  --folio-shadow-1: 0 1px 2px rgba(26, 24, 22, 0.05), 0 1px 1px rgba(26, 24, 22, 0.03);
+  --folio-shadow-2: 0 8px 24px -8px rgba(26, 24, 22, 0.18);
+  --folio-shadow-3: 0 24px 60px -20px rgba(26, 24, 22, 0.30);
+
+  --folio-lightbox-bg: rgba(26, 24, 22, 0.92);
+  --folio-lightbox-btn: rgba(255, 255, 255, 0.12);
+  --folio-lightbox-btn-border: rgba(255, 255, 255, 0.18);
+  --folio-lightbox-btn-hover: rgba(255, 255, 255, 0.24);
+  --folio-lightbox-text: rgba(255, 255, 255, 0.72);
+  --folio-lightbox-shadow: rgba(0, 0, 0, 0.35);
+}
+
+@theme inline {
+  --color-background: var(--folio-bg);
+  --color-foreground: var(--folio-foreground);
+  --color-card: var(--folio-card);
+  --color-card-foreground: var(--folio-card-foreground);
+  --color-popover: var(--folio-popover);
+  --color-popover-foreground: var(--folio-popover-foreground);
+  --color-primary: var(--folio-primary);
+  --color-primary-foreground: var(--folio-primary-foreground);
+  --color-muted: var(--folio-muted);
+  --color-muted-foreground: var(--folio-muted-foreground);
+  --color-border: var(--folio-border);
+  --color-input: var(--folio-input);
+  --color-ring: var(--folio-ring);
+  --radius-md: var(--folio-radius-md);
+  --radius-lg: var(--folio-radius-lg);
+}
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.1/dist/index.global.js"></script>
+    <script src="https://unpkg.com/lucide@1.8.0/dist/umd/lucide.min.js"></script>
+    <style type="text/tailwindcss">
+  @theme inline {
+    --color-background: var(--folio-bg);
+    --color-foreground: var(--folio-foreground);
+    --color-card: var(--folio-card);
+    --color-card-foreground: var(--folio-card-foreground);
+    --color-popover: var(--folio-popover);
+    --color-popover-foreground: var(--folio-popover-foreground);
+    --color-primary: var(--folio-primary);
+    --color-primary-foreground: var(--folio-primary-foreground);
+    --color-muted: var(--folio-muted);
+    --color-muted-foreground: var(--folio-muted-foreground);
+    --color-border: var(--folio-border);
+    --color-input: var(--folio-input);
+    --color-ring: var(--folio-ring);
+    --radius-md: var(--folio-radius-md);
+    --radius-lg: var(--folio-radius-lg);
+  }
+  @layer base {
+    body { background: var(--folio-bg); color: var(--folio-foreground); }
+    td, th { @apply break-words; word-break: break-all; word-break: auto-phrase; }
+    th { @apply whitespace-nowrap; }
+  }
+    </style>
+    <style id="semantic-token-fallback">
+      .bg-background { background-color: var(--folio-bg); }
+      .text-background { color: var(--folio-bg); }
+      .border-background { border-color: var(--folio-bg); }
+      .ring-background { --tw-ring-color: var(--folio-bg); }
+      .bg-foreground { background-color: var(--folio-foreground); }
+      .text-foreground { color: var(--folio-foreground); }
+      .border-foreground { border-color: var(--folio-foreground); }
+      .ring-foreground { --tw-ring-color: var(--folio-foreground); }
+      .bg-card { background-color: var(--folio-card); }
+      .text-card { color: var(--folio-card); }
+      .border-card { border-color: var(--folio-card); }
+      .ring-card { --tw-ring-color: var(--folio-card); }
+      .bg-card-foreground { background-color: var(--folio-card-foreground); }
+      .text-card-foreground { color: var(--folio-card-foreground); }
+      .border-card-foreground { border-color: var(--folio-card-foreground); }
+      .ring-card-foreground { --tw-ring-color: var(--folio-card-foreground); }
+      .bg-popover { background-color: var(--folio-popover); }
+      .text-popover { color: var(--folio-popover); }
+      .border-popover { border-color: var(--folio-popover); }
+      .ring-popover { --tw-ring-color: var(--folio-popover); }
+      .bg-popover-foreground { background-color: var(--folio-popover-foreground); }
+      .text-popover-foreground { color: var(--folio-popover-foreground); }
+      .border-popover-foreground { border-color: var(--folio-popover-foreground); }
+      .ring-popover-foreground { --tw-ring-color: var(--folio-popover-foreground); }
+      .bg-primary { background-color: var(--folio-primary); }
+      .text-primary { color: var(--folio-primary); }
+      .border-primary { border-color: var(--folio-primary); }
+      .ring-primary { --tw-ring-color: var(--folio-primary); }
+      .bg-primary-foreground { background-color: var(--folio-primary-foreground); }
+      .text-primary-foreground { color: var(--folio-primary-foreground); }
+      .border-primary-foreground { border-color: var(--folio-primary-foreground); }
+      .ring-primary-foreground { --tw-ring-color: var(--folio-primary-foreground); }
+      .bg-muted { background-color: var(--folio-muted); }
+      .text-muted { color: var(--folio-muted); }
+      .border-muted { border-color: var(--folio-muted); }
+      .ring-muted { --tw-ring-color: var(--folio-muted); }
+      .bg-muted-foreground { background-color: var(--folio-muted-foreground); }
+      .text-muted-foreground { color: var(--folio-muted-foreground); }
+      .border-muted-foreground { border-color: var(--folio-muted-foreground); }
+      .ring-muted-foreground { --tw-ring-color: var(--folio-muted-foreground); }
+      .bg-border { background-color: var(--folio-border); }
+      .text-border { color: var(--folio-border); }
+      .border-border { border-color: var(--folio-border); }
+      .ring-border { --tw-ring-color: var(--folio-border); }
+      .bg-input { background-color: var(--folio-input); }
+      .text-input { color: var(--folio-input); }
+      .border-input { border-color: var(--folio-input); }
+      .ring-input { --tw-ring-color: var(--folio-input); }
+      .bg-ring { background-color: var(--folio-ring); }
+      .text-ring { color: var(--folio-ring); }
+      .border-ring { border-color: var(--folio-ring); }
+      .ring-ring { --tw-ring-color: var(--folio-ring); }
+    </style>
+    <style>
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      [data-icon] {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        background-color: currentColor;
+      }
+    </style>
+    <style>
+        .project-hero {
+            background: linear-gradient(180deg, #1a1816 0%, #2d2925 55%, #1a1816 100%);
+        }
+        .gallery-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+            cursor: zoom-in;
+            transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--folio-shadow-3);
+        }
+        .gallery-item img {
+            transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .gallery-item:hover img {
+            transform: scale(1.03);
+        }
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--folio-lightbox-bg);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.35s ease, visibility 0.35s ease;
+            padding: 1.5rem;
+        }
+        .lightbox.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .lightbox img {
+            max-width: 100%;
+            max-height: 92vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 24px 80px var(--folio-lightbox-shadow);
+            transform: scale(0.96);
+            transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .lightbox.active img {
+            transform: scale(1);
+        }
+        .lightbox-close,
+        .lightbox-prev,
+        .lightbox-next {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 999px;
+            background: var(--folio-lightbox-btn);
+            color: var(--folio-card);
+            cursor: pointer;
+            transition: background 0.2s ease, transform 0.2s ease;
+            border: 1px solid var(--folio-lightbox-btn-border);
+        }
+        .lightbox-close:hover,
+        .lightbox-prev:hover,
+        .lightbox-next:hover {
+            background: var(--folio-lightbox-btn-hover);
+            transform: scale(1.08);
+        }
+        .lightbox-close { top: 1.25rem; right: 1.25rem; }
+        .lightbox-prev { left: 1rem; top: 50%; transform: translateY(-50%); }
+        .lightbox-next { right: 1rem; top: 50%; transform: translateY(-50%); }
+        .lightbox-prev:hover { transform: translateY(-50%) scale(1.08); }
+        .lightbox-next:hover { transform: translateY(-50%) scale(1.08); }
+        .lightbox-counter {
+            position: absolute;
+            bottom: 1.25rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--folio-lightbox-text);
+            font-size: 13px;
+            letter-spacing: 0.08em;
+        }
+    </style>
+</head>
+<body class="min-h-screen font-sans antialiased overflow-x-hidden">
+    <main>
+        <nav id="top-nav" class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-5 md:px-10 md:py-6 transition-all duration-300 md:duration-500" aria-label="主导航">
+            <a href="../index.html" class="nav-back-link group flex items-center gap-2 text-sm font-medium text-white/90 transition-all duration-300 hover:text-white">
+                <i data-lucide="arrow-left" class="h-4 w-4 transition-transform group-hover:-translate-x-1"></i>
+                返回首页
+            </a>
+            <div class="flex items-center gap-5 md:gap-7">
+                <a href="../index.html#project-dock" class="nav-glow text-xs font-medium uppercase tracking-widest text-white/90 transition-all duration-300 hover:text-white md:text-sm">Projects</a>
+                <a href="../index.html" aria-label="关于我" class="nav-glow text-white/80 transition-all duration-300 hover:text-white">
+                    <i data-lucide="user" class="h-5 w-5 md:h-6 md:w-6"></i>
+                </a>
+                <a href="#" aria-label="Instagram" class="nav-glow text-white/80 transition-all duration-300 hover:text-white">
+                    <i data-lucide="instagram" class="h-5 w-5 md:h-6 md:w-6"></i>
+                </a>
+                <button type="button" id="btn-music" aria-label="播放/暂停背景音乐" class="nav-glow relative cursor-pointer text-white/80 transition-all duration-300 hover:scale-110 hover:text-white">
+                    <i data-lucide="music" class="h-5 w-5 md:h-6 md:w-6" id="music-icon"></i>
+                    <span class="absolute -right-1 -top-1 h-2 w-2 rounded-full bg-rose-400/80 hidden" id="music-dot"></span>
+                </button>
+            </div>
+        </nav>
+
+        <section class="project-hero relative overflow-hidden pt-40 pb-20 md:pt-52 md:pb-28">
+            <img src="../assets/hero-p04.jpg" alt="" class="absolute inset-0 h-full w-full object-cover opacity-40" aria-hidden="true">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#1a1e3d]/75 via-[#1a1e3d]/55 to-[#1a1e3d]" aria-hidden="true"></div>
+            <div class="hero-radial-glow pointer-events-none absolute inset-0 z-[1]" aria-hidden="true"></div>
+            <div class="floating-elements pointer-events-none absolute inset-0 z-[2] overflow-hidden" aria-hidden="true">
+                <svg class="float-shape shape-bowtie" style="top:16%;left:10%;width:32px;height:32px;animation-duration:14s;animation-delay:-2s;" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M8 12 L20 24 L8 36 L8 12 Z" fill="rgba(255,255,255,0.5)"/>
+                    <path d="M40 12 L28 24 L40 36 L40 12 Z" fill="rgba(255,255,255,0.5)"/>
+                    <circle cx="24" cy="24" r="4" fill="rgba(255,255,255,0.7)"/>
+                </svg>
+                <svg class="float-shape shape-diamond" style="top:26%;right:14%;width:26px;height:26px;animation-duration:12s;animation-delay:-4s;" viewBox="0 0 48 48" fill="none">
+                    <path d="M24 4 L44 24 L24 44 L4 24 Z" fill="rgba(255,255,255,0.42)"/>
+                </svg>
+                <svg class="float-shape shape-star" style="top:12%;right:30%;width:22px;height:22px;animation-duration:10s;animation-delay:-1s;" viewBox="0 0 48 48" fill="none">
+                    <path d="M24 2 L29 18 L46 18 L32 28 L37 44 L24 34 L11 44 L16 28 L2 18 L19 18 Z" fill="rgba(255,255,255,0.55)"/>
+                </svg>
+                <svg class="float-shape shape-bowtie" style="top:64%;left:20%;width:28px;height:28px;animation-duration:16s;animation-delay:-6s;" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M8 12 L20 24 L8 36 L8 12 Z" fill="rgba(255,255,255,0.38)"/>
+                    <path d="M40 12 L28 24 L40 36 L40 12 Z" fill="rgba(255,255,255,0.38)"/>
+                    <circle cx="24" cy="24" r="4" fill="rgba(255,255,255,0.58)"/>
+                </svg>
+                <svg class="float-shape shape-diamond" style="top:72%;right:24%;width:30px;height:30px;animation-duration:13s;animation-delay:-3s;" viewBox="0 0 48 48" fill="none">
+                    <path d="M24 4 L44 24 L24 44 L4 24 Z" fill="rgba(255,255,255,0.32)"/>
+                </svg>
+                <svg class="float-shape shape-star" style="top:70%;left:8%;width:18px;height:18px;animation-duration:11s;animation-delay:-5s;" viewBox="0 0 48 48" fill="none">
+                    <path d="M24 2 L29 18 L46 18 L32 28 L37 44 L24 34 L11 44 L16 28 L2 18 L19 18 Z" fill="rgba(255,255,255,0.48)"/>
+                </svg>
+                <span class="float-orb" style="top:22%;left:28%;width:6px;height:6px;animation-duration:18s;animation-delay:-3s;"></span>
+                <span class="float-orb" style="top:38%;right:36%;width:8px;height:8px;animation-duration:22s;animation-delay:-6s;"></span>
+                <span class="float-orb" style="top:58%;left:16%;width:5px;height:5px;animation-duration:16s;animation-delay:-10s;"></span>
+                <span class="float-orb" style="top:78%;right:34%;width:7px;height:7px;animation-duration:20s;animation-delay:-14s;"></span>
+            </div>
+            <div class="relative z-10 mx-auto max-w-6xl px-6 md:px-10">
+                <div class="mb-5 flex flex-wrap items-center gap-3">
+                    <span class="hero-tag inline-flex items-center rounded-full border border-white/30 px-3 py-1 text-[11px] font-medium uppercase tracking-wider text-white/90">
+                        Project 04
+                    </span>
+                    <span class="hero-tag inline-flex items-center rounded-full border border-white/25 px-3 py-1 text-[11px] font-medium text-white/80">
+                        装置视觉 / 未来光泽
+                    </span>
+                </div>
+                <h1 class="project-title hero-wordmark mb-5 text-4xl font-black leading-[0.95] tracking-tight md:text-6xl lg:text-7xl">
+                    <span class="chrome-text letter-wave">L</span><span class="chrome-text letter-wave">U</span><span class="chrome-text letter-wave">M</span><span class="chrome-text letter-wave">I</span><span class="chrome-text letter-wave">N</span><span class="chrome-text letter-wave">A</span>
+                    <span class="block mt-2 text-2xl font-light tracking-wide text-white/80 md:text-3xl lg:text-4xl">流光</span>
+                </h1>
+            </div>
+        </section>
+
+        <div class="hero-fade-separator" aria-hidden="true"></div>
+
+        <section class="reveal-on-scroll border-y border-border bg-background py-16 md:py-24">
+            <div class="mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-12 md:gap-16 md:px-10">
+                <div class="md:col-span-4">
+                    <h2 class="mb-4 text-lg font-medium uppercase tracking-widest text-primary">设计介绍</h2>
+                    <div class="space-y-4 text-sm leading-relaxed text-muted-foreground">
+                        <p>这是一组以「光作为材料」的装置视觉。项目把光线从背景提升到主体位置，让它像金属、织物或石材一样被雕刻、折叠与悬挂。</p>
+                        <p>画面呈现出一种未来主义的仪式感和科技诗意，探索人造光如何塑造空间体验。</p>
+                    </div>
+                </div>
+                <div class="space-y-6 text-sm leading-relaxed text-foreground/90 md:col-span-8">
+                    <p>LUMINA 源于我对灯光装置的长期兴趣：光没有重量，却能划分空间；它不留下实体痕迹，却能改变人的情绪。在这个系列里，我把光视为一种可塑材料，用 3D 渲染与摄影结合的方式，创造出悬浮的发光体、缠绕的光带与反射的镜面空间。</p>
+                    <p>视觉基调以深空黑、冷银和荧光白为主，偶尔渗入一抹电紫或激光红。材质上大量使用镜面不锈钢、磨砂玻璃、光纤与透明树脂，让画面在科技感与神秘感之间切换。</p>
+                    <p>构图上强调几何秩序与对称，同时用动态模糊和光轨打破静态，暗示能量在场域中的流动。人物被处理成剪影或完全缺席，让观者的注意力集中在光本身的形态与行为上。</p>
+                    <p>这套视觉适用于装置艺术纪录、未来主义品牌发布、科技展览或沉浸式演出。它追问的是：当光成为一种建筑材料，空间还会是原来的空间吗？</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="reveal-on-scroll bg-background py-16 md:py-24">
+            <div class="mx-auto max-w-7xl px-6 md:px-10">
+                <div class="columns-1 gap-6 md:columns-2 lg:columns-3" id="lumina-gallery">
+                    <figure class="gallery-item overflow-hidden rounded-2xl bg-muted" data-index="0">
+                        <img src="../assets/lumina-detail-01.jpg" alt="LUMINA 01" class="h-auto w-full object-cover">
+                    </figure>
+                    <figure class="gallery-item overflow-hidden rounded-2xl bg-muted" data-index="1">
+                        <img src="../assets/lumina-detail-02.jpg" alt="LUMINA 02" class="h-auto w-full object-cover">
+                    </figure>
+                    <figure class="gallery-item overflow-hidden rounded-2xl bg-muted" data-index="2">
+                        <img src="../assets/lumina-detail-03.jpg" alt="LUMINA 03" class="h-auto w-full object-cover">
+                    </figure>
+                    <figure class="gallery-item overflow-hidden rounded-2xl bg-muted" data-index="3">
+                        <img src="../assets/lumina-detail-04.jpg" alt="LUMINA 04" class="h-auto w-full object-cover">
+                    </figure>
+                    <figure class="gallery-item overflow-hidden rounded-2xl bg-muted" data-index="4">
+                        <img src="../assets/lumina-detail-05.jpg" alt="LUMINA 05" class="h-auto w-full object-cover">
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <div class="lightbox" id="lumina-lightbox" aria-hidden="true">
+            <button class="lightbox-close" aria-label="关闭" id="lightbox-close">
+                <i data-lucide="x" class="h-5 w-5"></i>
+            </button>
+            <button class="lightbox-prev" aria-label="上一张" id="lightbox-prev">
+                <i data-lucide="chevron-left" class="h-6 w-6"></i>
+            </button>
+            <img src="" alt="" id="lightbox-img">
+            <button class="lightbox-next" aria-label="下一张" id="lightbox-next">
+                <i data-lucide="chevron-right" class="h-6 w-6"></i>
+            </button>
+            <span class="lightbox-counter" id="lightbox-counter"></span>
+        </div>
+
+        <footer class="border-t border-border bg-background px-6 py-10 md:px-10">
+            <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-center md:flex-row md:text-left">
+                <a href="mailto:rrss0221@163.com" class="text-sm font-medium text-foreground transition-colors hover:text-primary">
+                    rrss0221@163.com
+                </a>
+                <p class="text-xs text-muted-foreground">
+                    © 2026 ZHI YU
+                </p>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            lucide.createIcons();
+
+            const topNav = document.getElementById('top-nav');
+            const hero = document.querySelector('.project-hero');
+            function updateNav() {
+                if (!hero || !topNav) return;
+                const heroBottom = hero.getBoundingClientRect().bottom;
+                topNav.classList.toggle('nav-scrolled', heroBottom < 80);
+            }
+            updateNav();
+            window.addEventListener('scroll', updateNav, { passive: true });
+
+            const gallery = document.getElementById('lumina-gallery');
+            const lightbox = document.getElementById('lumina-lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCounter = document.getElementById('lightbox-counter');
+            const closeBtn = document.getElementById('lightbox-close');
+            const prevBtn = document.getElementById('lightbox-prev');
+            const nextBtn = document.getElementById('lightbox-next');
+            const items = Array.from(gallery.querySelectorAll('.gallery-item'));
+            const sources = items.map(item => item.querySelector('img').src);
+            const alts = items.map(item => item.querySelector('img').alt);
+            let currentIndex = 0;
+
+            function openLightbox(index) {
+                currentIndex = index;
+                updateLightbox();
+                lightbox.classList.add('active');
+                lightbox.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+                lucide.createIcons();
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                lightbox.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
+
+            function updateLightbox() {
+                lightboxImg.src = sources[currentIndex];
+                lightboxImg.alt = alts[currentIndex];
+                lightboxCounter.textContent = (currentIndex + 1) + ' / ' + sources.length;
+            }
+
+            function showPrev(e) {
+                e.stopPropagation();
+                currentIndex = (currentIndex - 1 + sources.length) % sources.length;
+                updateLightbox();
+            }
+
+            function showNext(e) {
+                e.stopPropagation();
+                currentIndex = (currentIndex + 1) % sources.length;
+                updateLightbox();
+            }
+
+            items.forEach((item, index) => {
+                item.addEventListener('click', () => openLightbox(index));
+            });
+
+            closeBtn.addEventListener('click', closeLightbox);
+            prevBtn.addEventListener('click', showPrev);
+            nextBtn.addEventListener('click', showNext);
+
+            lightbox.addEventListener('click', function (e) {
+                if (e.target === lightbox || e.target === lightboxImg) {
+                    closeLightbox();
+                }
+            });
+
+            document.addEventListener('keydown', function (e) {
+                if (!lightbox.classList.contains('active')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') showPrev(e);
+                if (e.key === 'ArrowRight') showNext(e);
+            });
+
+            const revealElements = document.querySelectorAll('.reveal-on-scroll');
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+            revealElements.forEach(el => revealObserver.observe(el));
+            
+            // Fallback: ensure visibility after 1.5s even if observer fails
+            setTimeout(function() {
+                revealElements.forEach(function(el) {
+                    if (!el.classList.contains('is-visible')) {
+                        el.classList.add('is-visible');
+                    }
+                });
+            }, 1500);
+        });
+    </script>
+
+    <style>
+        #top-nav {
+            background: transparent;
+            border-bottom: 1px solid transparent;
+        }
+        #top-nav .nav-back-link,
+        #top-nav .nav-glow {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        #top-nav.nav-scrolled {
+            background: rgba(243, 240, 235, 0.8);
+            border-bottom-color: var(--folio-border);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        #top-nav.nav-scrolled .nav-back-link,
+        #top-nav.nav-scrolled .nav-glow {
+            color: var(--folio-ink);
+        }
+        #top-nav.nav-scrolled .nav-glow:hover,
+        #top-nav.nav-scrolled .nav-back-link:hover {
+            color: var(--folio-primary);
+        }
+
+        .chrome-text {
+            background: linear-gradient(
+                180deg,
+                #ffffff 0%,
+                #e8e4dd 25%,
+                #c4bdb3 50%,
+                #ffffff 65%,
+                #8c7b6c 100%
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow:
+                0 1px 0 rgba(255, 255, 255, 0.45),
+                0 3px 0 rgba(140, 123, 108, 0.25),
+                0 12px 34px rgba(26, 24, 22, 0.45);
+            filter: drop-shadow(0 10px 24px rgba(26, 24, 22, 0.35));
+        }
+
+        .project-title {
+            animation: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        .hero-tag {
+            animation: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+
+        .hero-radial-glow {
+            background: radial-gradient(ellipse at 50% 45%, rgba(255, 255, 255, 0.13) 0%, rgba(255, 245, 235, 0.05) 35%, transparent 70%);
+        }
+
+        .hero-fade-separator {
+            height: 80px;
+            margin-top: -80px;
+            position: relative;
+            z-index: 5;
+            background: linear-gradient(180deg, rgba(26, 24, 22, 0.55) 0%, rgba(26, 24, 22, 0.16) 50%, transparent 100%);
+            pointer-events: none;
+        }
+
+        .floating-elements {
+            color: rgba(255, 255, 255, 0.85);
+        }
+        .float-shape {
+            position: absolute;
+            filter: drop-shadow(0 4px 14px rgba(26, 24, 22, 0.3));
+            opacity: 0.8;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            will-change: transform, opacity;
+        }
+        .shape-bowtie { animation-name: bowtie-flow; }
+        @keyframes bowtie-flow {
+            0%, 100% { transform: translateY(0) rotate(0deg) scale(1); opacity: 0.7; }
+            25% { transform: translateY(-24px) rotate(14deg) scale(1.1); opacity: 0.9; }
+            50% { transform: translateY(-10px) rotate(-10deg) scale(0.95); opacity: 0.65; }
+            75% { transform: translateY(-28px) rotate(8deg) scale(1.05); opacity: 0.85; }
+        }
+        .shape-diamond { animation-name: diamond-flow; }
+        @keyframes diamond-flow {
+            0%, 100% { transform: translateY(0) rotate(45deg) scale(1); opacity: 0.6; }
+            33% { transform: translateY(-28px) rotate(68deg) scale(1.15); opacity: 0.9; }
+            66% { transform: translateY(-12px) rotate(32deg) scale(0.92); opacity: 0.7; }
+        }
+        .shape-star { animation-name: star-flow; }
+        @keyframes star-flow {
+            0%, 100% { transform: translateY(0) rotate(0deg) scale(1); opacity: 0.75; }
+            30% { transform: translateY(-18px) rotate(20deg) scale(1.12); opacity: 0.95; }
+            60% { transform: translateY(-8px) rotate(-12deg) scale(0.9); opacity: 0.6; }
+            85% { transform: translateY(-22px) rotate(8deg) scale(1.06); opacity: 0.88; }
+        }
+        .float-orb {
+            position: absolute;
+            border-radius: 999px;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3) 45%, transparent 70%);
+            box-shadow: 0 0 16px 2px rgba(255, 255, 255, 0.3), 0 0 36px 8px rgba(255, 255, 255, 0.12);
+            opacity: 0.65;
+            animation-name: orb-flow;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            will-change: transform, opacity;
+            pointer-events: none;
+        }
+        @keyframes orb-flow {
+            0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.5; }
+            33% { transform: translateY(-30px) translateX(16px) scale(1.2); opacity: 0.85; }
+            66% { transform: translateY(-14px) translateX(-12px) scale(0.88); opacity: 0.55; }
+        }
+
+        .nav-glow {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), filter 0.35s ease, color 0.3s ease;
+            filter: drop-shadow(0 0 0 rgba(255, 255, 255, 0));
+        }
+        .nav-glow:hover {
+            transform: scale(1.15);
+            filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.75)) drop-shadow(0 0 28px rgba(255, 255, 255, 0.45));
+            text-shadow: 0 0 12px rgba(255, 255, 255, 0.8), 0 0 24px rgba(255, 255, 255, 0.5);
+        }
+        #top-nav.nav-scrolled .nav-glow:hover {
+            filter: drop-shadow(0 0 10px rgba(140, 123, 108, 0.45));
+            text-shadow: none;
+        }
+
+        @keyframes fade-up {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    
+        .hero-wordmark { cursor: default; }
+        .hero-wordmark .letter-wave {
+            display: inline-block;
+            transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), filter 0.35s ease;
+            animation: letter-color-cycle 4s ease-in-out infinite;
+        }
+        .hero-wordmark:hover .letter-wave {
+            background-image: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1, #84fab0, #8fd3f4, #ff9a9e);
+            background-size: 400% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: letter-color-cycle 1.5s linear infinite, letter-bounce 0.6s ease-in-out infinite;
+        }
+
+        .hero-wordmark:hover .letter-wave:nth-child(1) { animation-delay: 0.0s, 0.00s; }
+
+        .hero-wordmark:hover .letter-wave:nth-child(2) { animation-delay: 3.0s, 0.05s; }
+
+        .hero-wordmark:hover .letter-wave:nth-child(3) { animation-delay: 2.5s, 0.10s; }
+
+        .hero-wordmark:hover .letter-wave:nth-child(4) { animation-delay: 2.0s, 0.15s; }
+
+        .hero-wordmark:hover .letter-wave:nth-child(5) { animation-delay: 1.5s, 0.20s; }
+
+        .hero-wordmark:hover .letter-wave:nth-child(6) { animation-delay: 1.0s, 0.25s; }
+
+        @keyframes letter-color-cycle {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 400% 50%; }
+        }
+        @keyframes letter-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+</style>
+    <script src="../assets/music.js"></script>
+    <script src="../assets/pjax.js"></script>
+</body>
+</html>
